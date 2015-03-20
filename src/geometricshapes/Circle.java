@@ -26,6 +26,17 @@ public class Circle {
 	}
 	/**
 	 * 
+	 * @param cerchio
+	 * @return true se la BB dell'oggetto che invoca il metodo contiene quella dell'oggetto ricevuto come parametro
+	 */
+	public boolean contains(Triangle t) {
+		boolean ritorna = false;
+		if ((this.getXMin() <= t.getXMin() && this.getYMin() <= t.getYMin()) && (this.getXMax() >= t.getXMax() && this.getYMax() >= t.getYMax()))
+			ritorna = true;
+		return ritorna;
+	}
+	/**
+	 * 
 	 * @param c
 	 * @return true se la BB del oggetto cerchio che richiama il metodo contiene la BB dell'altro oggetto cerchio passato come paramentro
 	 */
