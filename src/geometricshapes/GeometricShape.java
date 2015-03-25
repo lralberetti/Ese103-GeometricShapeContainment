@@ -30,7 +30,8 @@ public abstract class GeometricShape {
 	public boolean contains(GeometricShape s){
 		boolean result=false;
 		if(this.getXMin()<=s.getXMin()&&this.getYMin()<=s.getYMin()&&this.getXMax()>=s.getXMax()&&this.getYMax()>=s.getYMax())
-		 result=true;
+		result=true;
 		return result;
 	}
+	
 }

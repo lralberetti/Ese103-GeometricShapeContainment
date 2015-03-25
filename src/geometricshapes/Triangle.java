@@ -9,7 +9,12 @@ public class Triangle extends GeometricShape{
 	private double xV;
 	private double yV;
 	private double l;
-
+	/**
+	 * inizializza il tutto, la lunghezza del lato deve essere positivo
+	 * @param xV
+	 * @param yV
+	 * @param l
+	 */
 	public Triangle(double xV, double yV, double l) {
 		this.xV = xV;
 		this.yV = yV;
@@ -51,7 +56,7 @@ public class Triangle extends GeometricShape{
 	 */
 	@Override
 	public double getYMax(){
-		return this.yV+(Math.sqrt((3)/2))*this.l;
+		return this.yV + this.l * Math.sqrt(3) / 2;	
 	}
 	/**
 	 * 
