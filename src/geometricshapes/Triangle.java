@@ -70,7 +70,7 @@ public class Triangle {
 	 * @return la coordinata YMax della BB
 	 */
 	public double getYMax(){
-		return this.yV+(Math.sqrt((3)/2))*this.l;
+		return this.yV + this.l * Math.sqrt(3) / 2;	
 	}
 	/**
 	 * 
