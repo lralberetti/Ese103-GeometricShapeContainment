@@ -5,7 +5,7 @@ package geometricshapes;
  *
  */
 
-public class Triangle {
+public class Triangle extends GeometricShape{
 	private double xV;
 	private double yV;
 	private double l;
@@ -20,34 +20,12 @@ public class Triangle {
 			 this.l=l;
 	    }
 	}
-	/**
-	 * 
-	 * @param c
-	 * @return true se la BB del oggetto triangolo che richiama il metodo contiene la BB dell'altro oggetto cerchio passato come paramentro
-
-	 */
-	public boolean contains(Circle c){
-		boolean result=false;
-		if(this.getXMin()<= c.getXMin() && this.getYMin() <= c.getYMin() && this.getYMax() >= c.getXMax() && this.getYMax() >= c.getYMax())
-			result=true;
-		return result;
-	}
-	/**
-	 * 
-	 * @param t
-	 * @return true se la BB del oggetto triangolo che richiama il metodo contiene la BB dell'altro oggetto triangolo passato come paramentro
-
-	 */
-	public boolean contains(Triangle t){
-		boolean result=false;
-		if(this.getXMin() <= t.getXMin() && this.getYMin() <= t.getYMin() && this.getXMax() >= t.getXMax() && this.getYMax() >= t.getYMax())
-			result =true;
-			return result;
-	}
+	
 	/**
 	 * 
 	 * @return la coordinata YMin della BB
 	 */
+	@Override
 	public double getYMin(){
 		return this.yV;
 	}
@@ -55,6 +33,7 @@ public class Triangle {
 	 * 
 	 * @return la coordinata XMin della BB
 	 */
+	@Override
 	public double getXMin(){
 		return this.xV;
 	}
@@ -62,6 +41,7 @@ public class Triangle {
 	 * 
 	 * @return la coordinata XMax della BB
 	 */
+	@Override
 	public double getXMax(){
 		return this.xV+this.l;
 	}
@@ -69,6 +49,7 @@ public class Triangle {
 	 * 
 	 * @return la coordinata YMax della BB
 	 */
+	@Override
 	public double getYMax(){
 		return this.yV+(Math.sqrt((3)/2))*this.l;
 	}

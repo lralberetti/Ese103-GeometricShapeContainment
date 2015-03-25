@@ -4,7 +4,7 @@ package geometricshapes;
  * @author lralberetti
  *
  */
-public class Circle {
+public class Circle extends GeometricShape{
 	private double xC;
 	private double yC;
 	private double r;
@@ -24,32 +24,12 @@ public class Circle {
 		else
 			this.r = r;
 	}
-	/**
-	 * 
-	 * @param cerchio
-	 * @return true se la BB dell'oggetto che invoca il metodo contiene quella dell'oggetto ricevuto come parametro
-	 */
-	public boolean contains(Triangle t) {
-		boolean ritorna = false;
-		if ((this.getXMin() <= t.getXMin() && this.getYMin() <= t.getYMin()) && (this.getXMax() >= t.getXMax() && this.getYMax() >= t.getYMax()))
-			ritorna = true;
-		return ritorna;
-	}
-	/**
-	 * 
-	 * @param c
-	 * @return true se la BB del oggetto cerchio che richiama il metodo contiene la BB dell'altro oggetto cerchio passato come paramentro
-	 */
-	public boolean contains(Circle c){
-		boolean result=false;
-		if(this.getXMin()<=c.getXMin() && this.getYMin()<=c.getYMin() && this.getXMax()>=c.getXMax() && this.getYMax()>=c.getYMax())
-			result=true;
-		return result;
-    }
+	
 	/**
 	 * 
 	 * @return la X minima della BB
 	 */
+	@Override
 	public double getXMin(){
 		return this.xC-this.r;
 	}
@@ -57,6 +37,7 @@ public class Circle {
 	 * 
 	 * @return la Y minima della BB
 	 */
+	@Override
 	public double getYMin(){
 		return this.yC-this.r;
 	}
@@ -64,6 +45,7 @@ public class Circle {
 	 * 
 	 * @return la X massima della BB
 	 */
+	@Override
 	public double getXMax(){
 		return this.xC+r;
 	}
@@ -71,6 +53,7 @@ public class Circle {
 	 * 
 	 * @return la Y massima della BB
 	 */
+	@Override
 	public double getYMax(){
 		return this.yC+this.r;
 	}
