@@ -1,6 +1,6 @@
 package geometricshapes;
 
-public abstract class GeometricShape {
+public abstract class GeometricShape{
 	/**
 	 * 
 	 * @return il vertice XMax della BB

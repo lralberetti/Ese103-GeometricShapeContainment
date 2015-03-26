@@ -5,6 +5,11 @@ package geometricshapes;
  *
  */
 
+
+
+
+
+
 public class Triangle extends GeometricShape{
 	private double xV;
 	private double yV;

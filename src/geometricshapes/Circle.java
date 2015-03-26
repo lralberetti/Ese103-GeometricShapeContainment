@@ -9,6 +9,10 @@ public class Circle extends GeometricShape{
 	private double yC;
 	private double r;
 	
+	
+	
+	
+	
 	/**
 	 * inizializza il tutto, la lunghezza del raggio deve essere positivo
 	 * @param xC
