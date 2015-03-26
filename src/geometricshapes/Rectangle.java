@@ -20,9 +20,9 @@ public class Rectangle extends GeometricShape{
 			throw new IllegalArgumentException ("INSERISCI UN VALORE POSITIVO");
 		}
 		else{
-			 this.xSideLength=xSideLength;
-	    }
-		
+			this.xSideLength=xSideLength;
+		}
+
 		if(ySideLength<=0){
 			throw new IllegalArgumentException ("INSERISCI UN VALORE POSITIVO");
 		}
@@ -42,7 +42,7 @@ public class Rectangle extends GeometricShape{
 	 */
 	@Override
 	double getYMax() {
-		
+
 		return this.yV+this.ySideLength;
 	}
 	/**
@@ -162,6 +162,6 @@ public class Rectangle extends GeometricShape{
 			return false;
 		return true;
 	}
-	
+
 
 }

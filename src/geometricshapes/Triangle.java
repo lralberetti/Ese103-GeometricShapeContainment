@@ -27,10 +27,10 @@ public class Triangle extends GeometricShape{
 			throw new IllegalArgumentException ("INSERISCI UN VALORE POSITIVO");
 		}
 		else{
-			 this.l=l;
-	    }
+			this.l=l;
+		}
 	}
-	
+
 	/**
 	 * 
 	 * @return la coordinata YMin della BB
@@ -145,5 +145,5 @@ public class Triangle extends GeometricShape{
 			return false;
 		return true;
 	}
-	
+
 }
